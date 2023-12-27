@@ -5,9 +5,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Irshad's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -40,7 +41,7 @@
   </nav>
   <section id="profile">
     <div class="section__pic-container">
-      <img src="./assets/profile.png" alt="profile picture" />
+      <img src="./assets/profilepic.png" alt="profile picture" />
     </div>
     <div class="section__text">
       <p class="section__text__p1">Hello, I'm</p>
@@ -234,17 +235,15 @@
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
   </section>
   <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
+    <p class="section__text__p1" id="getintouch">Get in Touch</p>
     <h1 class="title">Contact Me</h1>
     <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p><a href="mailto:irshadpp13@gmail.com">irshadpp13@gmail.com</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p><a href="https://www.linkedin.com/in/mohammed-irshad-2398b125b">LinkedIn</a></p>
-      </div>
+      <form id="contact-form" >
+        <input type="text" name="name" id="name" placeholder="Your Full Name" required/>
+        <input type="email" name="email" id="email" placeholder="Your Email" required>
+        <textarea name="message" id="message" rows="7" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-color-2">Send Message</button>
+      </form>
     </div>
   </section>
   <footer>
